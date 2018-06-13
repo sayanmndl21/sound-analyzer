@@ -22,13 +22,16 @@ def record(filename, time=10, fs=44100):
     return recording
 
 if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        sys.exit('not enough arguments')
-    filename = sys.argv[1]
-    time_length = int(sys.argv[2])
+    if len(sys.argv) < 4:
+        sys.exit('not enough arguments! Please add height, distance, index and time')
+    if not os.path.exists('output'):
+        os.makedirs('output')
+    filename = 'output/'+sys.argv[1]+'m_'+sys.argv[2]+'m_'+sys.argv[3]
+    if len(sys.argv)>4:
+        time_length = int(sys.argv[4])
+    else:
+        time_length=10
     fs = 44100
-    if len(sys.argv) >= 4:
-        fs = int(sys.argv[3])
     record = record(filename, time=time_length, fs=fs)
     if len(record) == time_length * fs:
         print('\nRecord successfully saved!')

@@ -1,0 +1,255 @@
+/***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+body {
+  background: #383836;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+.name {
+    font-family: 'Raleway', Arial, sans-serif;
+height: 50px;
+width: 250px;
+border-radius: 60px;
+    text-align: center;
+color: azure;
+font-size: 30px;
+position: absolute;
+top:0;
+bottom: 400px;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+        
+}
+.alert {
+height: 250px;
+width: 250px;
+border-radius: 60px;
+   
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+        
+}
+.alert:hover {
+height: 250px;
+width: 250px;
+border-radius: 60px;
+background-color: #D00000;
+    box-shadow: 0 0 8px 0 #fff, 0 2px 20px 0 #fff;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+        
+}
+
+.contents {
+height: 190px;
+width: 190px;
+border-radius: 35px;
+background-color: #383836;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+transform: rotate(45deg);
+z-index: 2;       
+}
+
+.mode {
+height: 70px;
+width: 70px;
+border-radius: 50%;
+background-color: #A9A9A9;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;  
+padding-top: 8px;     
+}
+
+.buttonright {
+height: 60px;
+width: 60px;
+background-image: url("../assets/pics/rightoff.png");
+background-size: 100%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 140px;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+.buttonright:active {
+height: 60px;
+width: 60px;
+background-size: 100%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 140px;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+
+.buttonleft {
+height: 60px;
+width: 60px;
+    background-image: url("../assets/pics/leftoff.png");
+background-size: 100%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 140px;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+
+.buttonleft:active {
+height: 60px;
+width: 60px;
+    /*background-image: url("../assets/pics/lefton.png");*/
+background-size: 100%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 140px;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+
+.reboot {
+height: 40px;
+width: 40px;
+background-image: url("../assets/pics/reboot.png");
+background-size: 100%;
+position: absolute;
+top:0;
+bottom: 150px;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+
+
+.sit {
+height: 50px;
+width: 50px;
+    background-image: url("../assets/pics/chairoff.png");
+background-size: 100%;
+position: absolute;
+top:150px;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+.sit:active {
+height: 50px;
+width: 50px;
+    /*background-image: url("../assets/pics/chairon.png");*/
+background-size: 100%;
+position: absolute;
+top:150px;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+    position: absolute;
+top: 500px;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+vertical-align:middle;
+z-index: 4;       
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
