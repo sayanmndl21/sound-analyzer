@@ -10,7 +10,7 @@ password = getpass.getpass('password: ')
 
 try:
 #    connection = db.connect(host = 198.86.29.23, port= 24470, passwd=password, db = "logfile")
-    connection = mc.connect(host = "localhost", user = "root", passwd=password, db = "logfile")
+    connection = mc.connect(host = "198.86.29.23", port = "37746", user = "root", passwd=password, db = "drone_data")
 
 except mc.Error as e:
     print("Error %d: %s" % (e.args[0], e.args[1]))
@@ -18,7 +18,7 @@ except mc.Error as e:
 
 cursor = connection.cursor()
 
-cursor.execute ("DROP TABLE IF EXISTS employee")
+cursor.execute ("DROP TABLE IF EXISTS log")
 
 # delete
 #cursor.execute("""DROP TABLE employee;""")
@@ -38,10 +38,6 @@ confidence_level INTEGER
 cursor.execute(sql_command)
 
 log_data = [(time.strftime('%Y-%m-%d %H:%M:%S'),"8","3.3","9.6","05")]
-staff_data = [ ("William", "Shakespeare", "m", "1961-10-25"),
-               ("Frank", "Schiller", "m", "1955-08-17"),
-               ("Jane", "Wall", "f", "1989-03-14"),
-               ]
 
 cursor.execute("SELECT log, COUNT(*) FROM id WHERE log = '%s' GROUP BY log")
     # gets the number of rows affected by the command executed
